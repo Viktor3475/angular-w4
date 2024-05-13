@@ -1,0 +1,81 @@
+.traffic-light {
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  background-color: black;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.light {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.active.light {
+  opacity: 1;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+#upper {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+button.emergencyButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+button.emergencyButton:disabled{
+  color: white;
+  background-color: lightgray;
+}

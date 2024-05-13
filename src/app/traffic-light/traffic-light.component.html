@@ -1,0 +1,25 @@
+<div id="upper" class="traffic-light">
+  <div [class.active]="lightState['upper'] === 'red'" class="red light"></div>
+  <div [class.active]="lightState['upper'] === 'yellow'" class="yellow light"></div>
+  <div [class.active]="lightState['upper'] === 'green'" class="green light"></div>
+  <button [disabled]="lightState['upper'] === 'red'" (click)="cross('upper')">Пресичане</button>
+</div>
+<div id="right" class="traffic-light">
+  <div [class.active]="lightState['right'] === 'red'" class="red light"></div>
+  <div [class.active]="lightState['right'] === 'yellow'" class="yellow light"></div>
+  <div [class.active]="lightState['right'] === 'green'" class="green light"></div>
+  <button [disabled]="lightState['right'] === 'red'" (click)="cross('right')">Пресичане</button>
+</div>
+<div id="bottom" class="traffic-light">
+  <div [class.active]="lightState['bottom'] === 'red'" class="red light"></div>
+  <div [class.active]="lightState['bottom'] === 'yellow'" class="yellow light"></div>
+  <div [class.active]="lightState['bottom'] === 'green'" class="green light"></div>
+  <button [disabled]="lightState['bottom'] === 'red'" (click)="cross('bottom')">Пресичане</button>
+</div>
+<div id="left" class="traffic-light">
+  <div [class.active]="lightState['left'] === 'red'" class="red light"></div>
+  <div [class.active]="lightState['left'] === 'yellow'" class="yellow light"></div>
+  <div [class.active]="lightState['left'] === 'green'" class="green light"></div>
+  <button [disabled]="lightState['left'] === 'red'" (click)="cross('left')">Пресичане</button>
+</div>
+<button class="emergencyButton" [disabled]="emergency || emergencyCooldown" (click)="triggerEmergency()">Авария</button>
