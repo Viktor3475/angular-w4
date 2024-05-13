@@ -14,7 +14,7 @@ export class TrafficLightComponent implements OnInit {
     right: 'green',
     bottom: 'red',
     left: 'green',
-  }; // началното състояние на светофара
+  }; // началното състояние на светофарите
 
   /*
     upper - светофар в горната част на екрана
